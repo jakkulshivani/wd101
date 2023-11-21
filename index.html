@@ -1,1 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <!-- Link your CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>
+        Registration Form
+    </h1>
+    
+    <main>
+        <form id="registrationForm">
+            <label for="name">Name:<input type="text" id="name" name="name" required></label><br>
 
+            <label for="email">Email:<input type="email" id="email" name="email" required></label><br>
+
+            <label for="password">Password:<input type="password" id="password" name="password" required></label><br>
+
+            <label for="dob">Date of Birth:<input type="date" id="dob" name="dob" required></label><br>
+
+<label for="acceptTerms"><input type="checkbox" id="acceptTerms" name="acceptTerms" required>Accept terms and conditions</label><br>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <table id="dataTable">
+            <h1>Entries</h1>
+            <td>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>DOB</th>
+                    <th>Accepted terms?</th>
+                </tr>
+            </td>
+            <tbody>
+                <!-- Table rows will be dynamically added here -->
+            </tbody>
+        </table>
+    </main>
+
+    <!-- Link your JavaScript file -->
+    <script src = "./index.js">
+         document.getElementById('registrationForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevents the default form submission behavior
+      
+      // Perform any validation or data processing here
+      
+      // Redirect to another page after form submission
+      window.location.href = '/success_page';
+    </script>
+</body>
+</html>
