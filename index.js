@@ -1,3 +1,21 @@
+function minDate() {
+  const today = new Date();
+  return new Date(today.getFullYear() - 55, today.getMonth(), today.getDate())
+    .toISOString()
+    .split("T")[0];
+}
+
+function maxDate() {
+  const today = new Date();
+  return new Date(today.getFullYear() - 18, today.getMonth(), today.getDate())
+    .toISOString()
+    .split("T")[0];
+}
+
+const dobInput = document.getElementById("dob");
+dobInput.setAttribute("min", minDate());
+dobInput.setAttribute("max", maxDate());
+
 // Function to add form data to the table and localStorage
 function addDataToTable() {
   const name = document.getElementById("name").value;
