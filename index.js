@@ -88,6 +88,6 @@ document
     event.preventDefault(); // Prevents the default form submission
     addDataToTable();
     this.reset(); // Clear form fields after submission
-    localstorage.clear();
+    
   });
 
